@@ -8,7 +8,6 @@
     "packages/*"
   ],
   "scripts": {
-    "postinstall": "turbo telemetry disable",
     "build": "turbo run build",
     "format": "prettier -w .",
     "lint": "turbo run lint",
