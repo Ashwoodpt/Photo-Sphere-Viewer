@@ -811,6 +811,7 @@ export class MarkersPlugin extends AbstractConfigurablePlugin<
     }
 
     private __onMouseUp(e: events.MouseUpEvent) {
+        console.log(e)
         this.isMouseDown = false
     }
 
