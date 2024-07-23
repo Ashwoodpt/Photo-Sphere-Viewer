@@ -160,6 +160,21 @@ export class RenderMarkersListEvent extends MarkersPluginEvent {
     }
 }
 
+export class MouseUpEvent extends MarkersPluginEvent {
+    static override readonly type = 'mouseup';
+    override type: 'mouseup';
+
+    /** @internal */
+    constructor(
+        /** the list of markers to display, can be modified */
+        public marker: Marker,
+        public rightClick: boolean
+    ) {
+        super(MouseUpEvent.type);
+    }
+}
+
+
 export type MarkersPluginEvents =
     | MarkerVisibilityEvent
     | GotoMarkerDoneEvent
@@ -171,4 +186,5 @@ export type MarkersPluginEvents =
     | HideMarkersEvent
     | SetMarkersEvent
     | ShowMarkersEvent
-    | RenderMarkersListEvent;
+    | RenderMarkersListEvent
+    | MouseUpEvent;

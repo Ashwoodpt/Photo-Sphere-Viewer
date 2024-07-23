@@ -120,6 +120,8 @@ export class MarkersPlugin extends AbstractConfigurablePlugin<
     private readonly svgContainer: SVGElement;
     private readonly css3DContainer: CSS3DContainer;
 
+    private isMouseDown: boolean
+
     constructor(viewer: Viewer, config: MarkersPluginConfig) {
         super(viewer, config);
 
@@ -152,6 +154,7 @@ export class MarkersPlugin extends AbstractConfigurablePlugin<
         // Viewer events
         this.viewer.addEventListener(events.ClickEvent.type, this);
         this.viewer.addEventListener(events.DoubleClickEvent.type, this);
+        this.viewer.addEventListener(events.MouseUpEvent.type, this)
         this.viewer.addEventListener(events.RenderEvent.type, this);
         this.viewer.addEventListener(events.ConfigChangedEvent.type, this);
         this.viewer.addEventListener(events.ObjectEnterEvent.type, this);
@@ -202,6 +205,9 @@ export class MarkersPlugin extends AbstractConfigurablePlugin<
                 this.__onClick(e as events.ClickEvent, false);
                 break;
 
+            case events.MouseUpEvent.type:
+                this.__onMouseUp(e as events.MouseUpEvent)
+
             case events.DoubleClickEvent.type:
                 this.__onClick(e as events.DoubleClickEvent, true);
                 break;
@@ -241,6 +247,7 @@ export class MarkersPlugin extends AbstractConfigurablePlugin<
                 break;
 
             case 'mousemove':
+                if (this.isMouseDown) this.__onDragMarker(e as MouseEvent, this.__getTargetMarker(e.target as HTMLElement, true))
                 this.__onHoverMarker(e as MouseEvent, this.__getTargetMarker(e.target as HTMLElement, true));
                 break;
 
@@ -758,6 +765,8 @@ export class MarkersPlugin extends AbstractConfigurablePlugin<
     private __onClick(e: events.ClickEvent | events.DoubleClickEvent, dblclick: boolean) {
         const threeMarker = this.__getTargetMarker(e.data.objects);
         const stdMarker = this.__getTargetMarker(e.data.target, true);
+        
+        if (e.type !== 'dblclick') this.isMouseDown = true
 
         // give priority to standard markers which are always on top of Three markers
         const marker = stdMarker || threeMarker;
@@ -799,6 +808,15 @@ export class MarkersPlugin extends AbstractConfigurablePlugin<
                 }
             }
         }
+    }
+
+    private __onMouseUp(e: events.MouseUpEvent) {
+        this.isMouseDown = false
+    }
+
+    private __onDragMarker(e: MouseEvent, marker?: Marker) {
+        console.log(e)
+        console.log(marker)
     }
 
     private __afterChangerMarkers() {

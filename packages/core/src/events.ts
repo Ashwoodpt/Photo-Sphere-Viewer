@@ -74,6 +74,16 @@ export class ClickEvent extends ViewerEvent {
     }
 }
 
+export class MouseUpEvent extends ViewerEvent {
+    static override readonly type = 'mouseup';
+    override type: 'mouseup';
+
+    /** @internal */
+    constructor(public readonly data: ClickData) {
+        super(MouseUpEvent.type);
+    }
+}
+
 /**
  * @event Triggered when some options are changed
  */
@@ -454,11 +464,27 @@ export class ObjectHoverEvent extends ObjectEvent {
     }
 }
 
+/**
+ * @event Triggered when the cursor moves over an object in the scene
+ *
+ * Note: {@link Viewer#observeObjects} must be called for this event to be dispatched
+ */
+export class ObjectDragEvent extends ObjectEvent {
+    static override readonly type = 'drag-object';
+    override type: 'drag-object';
+
+    /** @internal */
+    constructor(originalEvent: MouseEvent, object: Mesh, viewerPoint: Point, userDataKey: string) {
+        super(ObjectDragEvent.type, originalEvent, object, viewerPoint, userDataKey);
+    }
+}
+
 export type ViewerEvents =
     | BeforeAnimateEvent
     | BeforeRenderEvent
     | BeforeRotateEvent
     | ClickEvent
+    | MouseUpEvent
     | ConfigChangedEvent
     | DoubleClickEvent
     | FullscreenEvent
@@ -483,5 +509,6 @@ export type ViewerEvents =
     | StopAllEvent
     | ZoomUpdatedEvent
     | ObjectEnterEvent
+    | ObjectDragEvent
     | ObjectLeaveEvent
     | ObjectHoverEvent;
