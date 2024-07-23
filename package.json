@@ -1,7 +1,7 @@
 {
-  "name": "@AshwoodPT/photo-sphere-viewer",
+  "name": "@ashwoodpt/photo-sphere-viewer",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "license": "MIT",
   "workspaces": [
     "docs",
