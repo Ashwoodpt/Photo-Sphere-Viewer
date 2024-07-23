@@ -1,5 +1,5 @@
 {
-  "name": "@photo-sphere-viewer/markers-plugin",
+  "name": "@cloudreaper/markers-plugin",
   "version": "0.0.0",
   "description": "Photo Sphere Viewer plugin to display various markers/hotspots on the viewer.",
   "homepage": "https://photo-sphere-viewer.js.org/plugins/markers",
