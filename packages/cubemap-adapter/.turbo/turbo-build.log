@@ -1,0 +1,28 @@
+
+> @photo-sphere-viewer/cubemap-adapter@0.0.0 build
+> tsup
+
+[34mCLI[39m Building entry: ./src/index.ts
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.2.0
+[34mCLI[39m Using tsup config: C:\Work\npm\photo-sphere-viewer\packages\cubemap-adapter\tsup.config.js
+[34mCLI[39m Target: es2021
+[34mCLI[39m Cleaning output folder
+[34mESM[39m Build start
+[34mCJS[39m Build start
+[34mDTS[39m Build start
+MAP Fix C:\Work\npm\photo-sphere-viewer\packages\cubemap-adapter\dist\index.module.js.map
+ASSET dist/LICENSE 1.15 kB
+ASSET dist/.npmrc 109 B
+ASSET dist/README.md 779 B
+ASSET dist/package.json 711 B
+[32mESM[39m [1mdist\index.module.js     [22m[32m10.65 KB[39m
+[32mESM[39m [1mdist\index.module.js.map [22m[32m23.13 KB[39m
+[32mESM[39m ⚡️ Build success in 4576ms
+MAP Fix C:\Work\npm\photo-sphere-viewer\packages\cubemap-adapter\dist\index.cjs.map
+[32mCJS[39m [1mdist\index.cjs     [22m[32m11.92 KB[39m
+[32mCJS[39m [1mdist\index.cjs.map [22m[32m23.23 KB[39m
+[32mCJS[39m ⚡️ Build success in 5001ms
+[32mDTS[39m ⚡️ Build success in 13151ms
+[32mDTS[39m [1mdist\index.d.mts [22m[32m3.06 KB[39m
+[32mDTS[39m [1mdist\index.d.ts  [22m[32m3.06 KB[39m

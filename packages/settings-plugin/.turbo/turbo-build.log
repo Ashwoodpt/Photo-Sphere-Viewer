@@ -1,0 +1,35 @@
+
+> @photo-sphere-viewer/settings-plugin@0.0.0 build
+> tsup
+
+[34mCLI[39m Building entry: ./src/index.ts
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.2.0
+[34mCLI[39m Using tsup config: C:\Work\npm\photo-sphere-viewer\packages\settings-plugin\tsup.config.js
+[34mCLI[39m Target: es2021
+[34mCLI[39m Cleaning output folder
+[34mESM[39m Build start
+[34mCJS[39m Build start
+[34mDTS[39m Build start
+MAP Fix C:\Work\npm\photo-sphere-viewer\packages\settings-plugin\dist\index.css.map
+MAP Fix C:\Work\npm\photo-sphere-viewer\packages\settings-plugin\dist\index.cjs.map
+[32mCJS[39m [1mdist\index.css     [22m[32m1.56 KB[39m
+[32mCJS[39m [1mdist\index.cjs     [22m[32m15.90 KB[39m
+[32mCJS[39m [1mdist\index.css.map [22m[32m8.28 KB[39m
+[32mCJS[39m [1mdist\index.cjs.map [22m[32m28.23 KB[39m
+[32mCJS[39m ⚡️ Build success in 4287ms
+MAP Fix C:\Work\npm\photo-sphere-viewer\packages\settings-plugin\dist\index.css.map
+MAP Fix C:\Work\npm\photo-sphere-viewer\packages\settings-plugin\dist\index.module.js.map
+SCSS dist/index.scss 7.14 kB
+ASSET dist/LICENSE 1.15 kB
+ASSET dist/.npmrc 109 B
+ASSET dist/README.md 811 B
+ASSET dist/package.json 791 B
+[32mESM[39m [1mdist\index.module.js     [22m[32m14.83 KB[39m
+[32mESM[39m [1mdist\index.css           [22m[32m1.56 KB[39m
+[32mESM[39m [1mdist\index.css.map       [22m[32m8.28 KB[39m
+[32mESM[39m [1mdist\index.module.js.map [22m[32m28.18 KB[39m
+[32mESM[39m ⚡️ Build success in 4581ms
+[32mDTS[39m ⚡️ Build success in 12160ms
+[32mDTS[39m [1mdist\index.d.mts [22m[32m3.54 KB[39m
+[32mDTS[39m [1mdist\index.d.ts  [22m[32m3.54 KB[39m

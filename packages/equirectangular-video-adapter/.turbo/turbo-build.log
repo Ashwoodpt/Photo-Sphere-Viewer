@@ -1,0 +1,28 @@
+
+> @photo-sphere-viewer/equirectangular-video-adapter@0.0.0 build
+> tsup
+
+[34mCLI[39m Building entry: ./src/index.ts
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.2.0
+[34mCLI[39m Using tsup config: C:\Work\npm\photo-sphere-viewer\packages\equirectangular-video-adapter\tsup.config.js
+[34mCLI[39m Target: es2021
+[34mCLI[39m Cleaning output folder
+[34mESM[39m Build start
+[34mCJS[39m Build start
+[34mDTS[39m Build start
+MAP Fix C:\Work\npm\photo-sphere-viewer\packages\equirectangular-video-adapter\dist\index.cjs.map
+[32mCJS[39m [1mdist\index.cjs     [22m[32m7.56 KB[39m
+[32mCJS[39m [1mdist\index.cjs.map [22m[32m14.94 KB[39m
+[32mCJS[39m ⚡️ Build success in 4969ms
+MAP Fix C:\Work\npm\photo-sphere-viewer\packages\equirectangular-video-adapter\dist\index.module.js.map
+ASSET dist/LICENSE 1.15 kB
+ASSET dist/.npmrc 109 B
+ASSET dist/README.md 905 B
+ASSET dist/package.json 753 B
+[32mESM[39m [1mdist\index.module.js     [22m[32m6.49 KB[39m
+[32mESM[39m [1mdist\index.module.js.map [22m[32m14.84 KB[39m
+[32mESM[39m ⚡️ Build success in 5314ms
+[32mDTS[39m ⚡️ Build success in 12307ms
+[32mDTS[39m [1mdist\index.d.mts [22m[32m2.90 KB[39m
+[32mDTS[39m [1mdist\index.d.ts  [22m[32m2.90 KB[39m
